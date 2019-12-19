@@ -1,0 +1,33 @@
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import '~material-icons/iconfont/material-icons.css';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    position: relative;
+    background-color: #535353;
+    z-index: -1000;
+    overflow: hidden;
+    color: white;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+}
+  
+.flex-column {
+    flex-direction: column !important;
+}
+
+.space-between {
+    justify-content: space-between !important;
+}
+  

@@ -1,0 +1,21 @@
+<div class="outer-div flex-container flex-column">
+  <form (ngSubmit)="onSubmit()" class="flex-container flex-column" [formGroup]="stockForm">
+    <h4>Enter a stock symbol and I'll let you guess yesterday's closing price!</h4>
+    <mat-form-field>
+      <input matInput placeholder="Enter a stock symbol" formControlName='symbolControl'>
+      <mat-error *ngIf="stockForm.hasError('required', 'symbolControl')">
+        Please enter a stock symbol!
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter a guess" formControlName='guessControl'>
+      <mat-error *ngIf="stockForm.hasError('required', 'guessControl')">
+        Please enter a guess!
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Guess!</button>
+  </form>
+
+  <h3 *ngIf="resStr"> {{ 'Your guess was ' + resStr }} </h3>
+
+</div>
